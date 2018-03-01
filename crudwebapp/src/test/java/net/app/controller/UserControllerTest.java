@@ -1,7 +1,5 @@
 package net.app.controller;
 
-import static org.junit.Assert.*;
-
 import org.hamcrest.Matchers;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -16,7 +14,7 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
 
 @RunWith(SpringRunner.class)
-@SpringBootTest
+@SpringBootTest 
 @AutoConfigureMockMvc
 public class UserControllerTest {
 
@@ -26,9 +24,9 @@ public class UserControllerTest {
 	@Test
 	public void testGetUser() throws Exception{
 
-		mockMvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.APPLICATION_JSON)).
+		mockMvc.perform(MockMvcRequestBuilders.get("/getUser/1").accept(MediaType.APPLICATION_JSON)).
 		andExpect(MockMvcResultMatchers.status().isOk()).
-		andExpect(MockMvcResultMatchers.content().string(Matchers.equalTo("test")));
+		andExpect(MockMvcResultMatchers.content().string(Matchers.equalTo("")));
 	}
 
 }
