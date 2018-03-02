@@ -11,7 +11,7 @@ import net.app.entity.User;
 import net.app.service.UserService;
 
 @RestController
-public class UserController {
+public class UserRestController {
 
 	@Autowired
 	private UserService userService;
